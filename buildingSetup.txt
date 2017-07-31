@@ -1,0 +1,35 @@
+The setup.py file is provided to build setup from the given hello.py program file.
+
+***Following is the procedure to make executables from python program***
+
+1. setup.py is configured to run hellp.py and convert it into executable.
+2. You must have cx_Freeze module installed in Python.
+3. Run the following command to build executables
+		
+		python setup.py "COMMAND"
+
+Standard commands:
+  build            build everything needed to install
+  build_py         "build" pure Python modules (copy to build directory)
+  build_ext        build C/C++ extensions (compile/link to build directory)
+  build_clib       build C/C++ libraries used by Python extensions
+  build_scripts    "build" scripts (copy and fixup #! line)
+  clean            clean up temporary files from 'build' command
+  install          install everything from build directory
+  install_lib      install all Python modules (extensions and pure Python)
+  install_headers  install C/C++ header files
+  install_scripts  install scripts (Python or otherwise)
+  install_data     install data files
+  sdist            create a source distribution (tarball, zip file, etc.)
+  register         register the distribution with the Python package index
+  bdist            create a built (binary) distribution
+  bdist_dumb       create a "dumb" built distribution
+  bdist_rpm        create an RPM distribution
+  bdist_wininst    create an executable installer for MS Windows
+  check            perform some checks on the package
+  upload           upload binary package to PyPI
+
+Extra commands:
+  bdist_msi        create a Microsoft Installer (.msi) binary distribution
+  build_exe        build executables from Python scripts
+  install_exe      install executables built from Python scripts
