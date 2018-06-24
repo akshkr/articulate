@@ -1,4 +1,4 @@
-###Features
+### Features
 
 - Scraps Article on mutiple topics at once;
 - Saves Fomatted word file containing headers and text scaped;
@@ -16,12 +16,6 @@
 
  ![](https://img.shields.io/badge/release%20date-june-blue.svg) ![](https://img.shields.io/badge/tag-python-brightgreen.svg) ![](https://img.shields.io/badge/release-v1.0.0-blue.svg) 
 
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
-
 ---
 ### Introduction
 Articulate is a software to prepare articles on single or multiple topics at once. It saves the articles in MS-Word automatically with a little formatting. Novice developers are welcomed to do modification and contribute to the repository.
@@ -31,7 +25,7 @@ Articulate is a software to prepare articles on single or multiple topics at onc
 - Install dependencies
 
 
-    pip install -r requirements.txt
+	pip install -r requirements.txt
 
 - Run driver.py
 
