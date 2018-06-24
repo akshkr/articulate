@@ -9,7 +9,8 @@ warnings.filterwarnings("ignore")
 class MainDriver:
 	
 	def __init__(self):
-		self.prompt_text = open('prompts/start_screen.txt', 'r+')
+		self.start_screen_file = open('prompts/start_screen.txt', 'r+')
+		self.connect_error_file = open('prompts/connection_error.txt', 'r+')
 		self.user_text_input = ''
 		self.content_sc = ContentScrapper()
 		self.doc = DocSavar()
@@ -17,8 +18,8 @@ class MainDriver:
 	
 	def user_input(self):
 		try:
-			contents = self.prompt_text.readlines()
-			ColorPrinter.print_colored(contents)
+			start_screen_text = self.start_screen_file.readlines()
+			ColorPrinter.print_colored(start_screen_text)
 			print("\n\033[0;30;48m Enter the topics separated by commas : \n")
 			user_text_input = input()
 			return user_text_input
@@ -31,7 +32,8 @@ class MainDriver:
 			self.user_text_input = self.user_input()
 			result_json = self.content_sc.get_content(self.user_text_input)
 			if result_json == 0:
-				print("Error encountered in the network connection")
+				connection_error_txt = self.connect_error_file.readlines()
+				ColorPrinter.print_colored(connection_error_txt)
 				return
 			self.doc.save_to_doc(result_json)
 		except Exception as ex:
