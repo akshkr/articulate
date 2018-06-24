@@ -24,8 +24,9 @@ Articulate is a software to prepare articles on single or multiple topics at onc
 
 - Install dependencies
 
-
+```python
 	pip install -r requirements.txt
+```
 
 - Run driver.py
 
