@@ -1,4 +1,5 @@
 from utils.save_doc import DocSavar
+# from utils.save_pdf import PdfSaver
 from processor.content_scrapper import ContentScrapper
 from utils.colored_printer import ColorPrinter
 import warnings
@@ -14,6 +15,7 @@ class MainDriver:
 		self.user_text_input = ''
 		self.content_sc = ContentScrapper()
 		self.doc = DocSavar()
+		# self.pdf_saver = PdfSaver()
 		self.article_maker()
 	
 	def user_input(self):
@@ -36,6 +38,10 @@ class MainDriver:
 				ColorPrinter.print_colored(connection_error_txt)
 				return
 			self.doc.save_to_doc(result_json)
+			
+			# FIXME find another module to convert word to pdf as this module doesn't work in Linux
+			# This is the help wanted issue raised on Github
+			# self.pdf_saver.save_to_pdf(result_json)
 		except Exception as ex:
 			print("Error encountered while making article")
 			print(ex)
