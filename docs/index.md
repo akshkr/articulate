@@ -15,7 +15,7 @@
 
 ![](https://akashnotes.com/img/placeholders/photos/articulate_mini_logo.png)
 
- ![](https://img.shields.io/badge/release%20date-june-blue.svg) ![](https://img.shields.io/badge/tag-python-brightgreen.svg) ![](https://img.shields.io/badge/release-v1.0.0-blue.svg) 
+ ![](https://img.shields.io/badge/release%20date-june-blue.svg) ![](https://img.shields.io/badge/tag-python-brightgreen.svg) ![](https://img.shields.io/badge/release-v1.0.0-blue.svg) ![](https://img.shields.io/badge/issue-1-red.svg) 
 
 ---
 ### Introduction
