@@ -16,7 +16,9 @@ class MainDriver:
 		self.content_sc = ContentScrapper()
 		self.doc = DocSavar()
 		# self.pdf_saver = PdfSaver()
-		self.article_maker()
+
+		# Remove the comment below to start user input
+		# self.article_maker()
 	
 	def user_input(self):
 		try:
@@ -29,16 +31,19 @@ class MainDriver:
 			print("Error Encountered while taking user input")
 			print(ex)
 			
-	def article_maker(self):
+	def article_maker(self, input_string = ""):
 		try:
-			self.user_text_input = self.user_input()
+			if input_string == "":
+				self.user_text_input = self.user_input()
+			else:
+				self.user_text_input = input_string
 			result_json = self.content_sc.get_content(self.user_text_input)
 			if result_json == 0:
 				connection_error_txt = self.connect_error_file.readlines()
 				ColorPrinter.print_colored(connection_error_txt)
 				return
-			self.doc.save_to_doc(result_json)
-			
+			f = self.doc.save_to_doc(result_json)
+			return f
 			# FIXME find another module to convert word to pdf as this module doesn't work in Linux
 			# This is the help wanted issue raised on Github
 			# self.pdf_saver.save_to_pdf(result_json)
