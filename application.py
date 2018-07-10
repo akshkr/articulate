@@ -24,6 +24,9 @@ def hello(topics):
     # print(res)
     return send_from_directory(directory = os.getcwd(), filename=res)
 
+@app.route("/")
+def world():
+	return "Hello WOrld"
  
 if __name__ == "__main__":
     app.run()
