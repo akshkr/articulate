@@ -3,6 +3,7 @@ from utils.save_doc import DocSavar
 from processor.content_scrapper import ContentScrapper
 from utils.colored_printer import ColorPrinter
 import warnings
+import argparse
 
 warnings.filterwarnings("ignore")
 
@@ -24,7 +25,7 @@ class MainDriver:
 		try:
 			start_screen_text = self.start_screen_file.readlines()
 			ColorPrinter.print_colored(start_screen_text)
-			print("\n\033[0;30;48m Enter the topics separated by commas : \n")
+			print("\n\033[0;31;48m Enter the topics separated by commas : \n")
 			user_text_input = input()
 			return user_text_input
 		except Exception as ex:
@@ -53,4 +54,13 @@ class MainDriver:
 
 
 if __name__ == "__main__":
-	c = MainDriver()
+	parser = argparse.ArgumentParser(description="List of arguments required for launching automated EPOD2 Engine")
+	parser.add_argument('--config', default=None, help='CLI to start cli')
+
+	args = parser.parse_args()
+	mode = args.config
+	if mode == "CLI":
+		obj = MainDriver()
+		obj.article_maker()
+	else:
+		c = MainDriver()

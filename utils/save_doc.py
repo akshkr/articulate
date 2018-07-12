@@ -13,11 +13,11 @@ class DocSavar:
 			for key, value in input_json.items():
 				self.doc.add_heading(key, 0)
 				self.doc.add_paragraph(value)
-			# document_name = "str(time.time())"
-			document_name = "new_doc"
+			# document_name = str(time.time())
+			document_name = "articulate"
 			self.doc.save(document_name + '.docx')
-			return document_name + '.docx'
 			print("The file is saved in %s as %s" %(os.getcwd(), document_name+'.docx'))
+			return document_name + '.docx'
 			# if pdf:
 			# 	return document_name+'.docx'
 		except Exception as ex:
