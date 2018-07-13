@@ -25,6 +25,9 @@ https://akashnotes.com/articulate.html
 ### Introduction
 Articulate is a software to prepare articles on single or multiple topics at once. It saves the articles in MS-Word automatically with a little formatting. Novice developers are welcomed to do modification and contribute to the repository.
 
+### Source Code
+https://github.com/akshkr/articulate
+
 ### Installing Articulate
 
 - Install dependencies
